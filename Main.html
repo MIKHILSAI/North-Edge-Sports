@@ -77,26 +77,13 @@
             </tr>
         </table>
         <div class="form-buttons">
-            <button type="submit" id="submit">Submit</button>
+            <button type="button" id="addRowBtn">Add Row</button>
+            <button type="button" id="exportBtn">Export to Excel</button>
             <button type="button" id="clear" onclick="clearForm()">Clear</button>
         </div>
     </form>
 
-    <script>
-        function setCurrentDate() {
-            const dateInput = document.getElementById('date');
-            const today = new Date();
-            const formattedDate = today.toISOString().split('T')[0];
-            dateInput.value = formattedDate;
-        }
-
-        function clearForm() {
-            const form = document.querySelector('form');
-            form.reset();
-            setCurrentDate();
-        }
-
-        document.addEventListener('DOMContentLoaded', setCurrentDate);
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
