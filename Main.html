@@ -16,11 +16,11 @@
             </tr>
             <tr>
                 <td><label>Batch Type:</label></td>
-                <td><input type="text"name="batchType"</td>
+                <td><input type="text" name="batchType"></td>
             </tr>
             <tr>
                 <td><label>Date:</label></td>
-                <td><input type="date" name="date"></td>
+                <td><input type="date" id="date" name="date"></td>
             </tr>
             <tr>
                 <td><label>Time of Day:</label></td>
@@ -83,11 +83,20 @@
     </form>
 
     <script>
+        function setCurrentDate() {
+            const dateInput = document.getElementById('date');
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            dateInput.value = formattedDate;
+        }
+
         function clearForm() {
             const form = document.querySelector('form');
             form.reset();
+            setCurrentDate();
         }
 
+        document.addEventListener('DOMContentLoaded', setCurrentDate);
     </script>
 </body>
 </html>
