@@ -63,10 +63,11 @@ button {
     cursor: pointer;
 }
 
-#submit {
-    background-color: blue;
+button#addRowBtn, button#exportBtn {
+    background-color: #007BFF;
     color: white;
 }
+
 
 #clear {
     background-color: red;
