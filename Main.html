@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Edge Sports Academy</title>
+    <link rel="icon" href="images.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td><label>Batch Type:</label></td>
+                <td><input type="text"name="batchType"</td>
+            </tr>
+            <tr>
+                <td><label>Date:</label></td>
+                <td><input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td><label>Time of Day:</label></td>
+                <td>
+                    <select name="timeOfDay">
+                        <option>Morning</option>
+                        <option>Evening</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Coaching:</label></td>
+                <td>
+                    <select name="coaching">
+                        <option>3:00 PM - 4:00 PM</option>
+                        <option>4:00 PM - 5:00 PM</option>
+                        <option>5:00 PM - 6:00 PM</option>
+                        <option>4:30 PM - 5:30 PM</option>
+                        <option>5:30 PM - 6:30 PM</option>
+                        <option>6:00 PM - 7:00 PM</option>
+                        <option>NA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Subscription Type:</label></td>
+                <td><input type="text" name="subscriptionType"></td>
+            </tr>
+            <tr>
+                <td><label>Amount:</label></td>
+                <td><input type="number" name="amount"></td>
+            </tr>
+            <tr>
+                <td><label>Payment Mode:</label></td>
+                <td>
+                    <select name="paymentMode">
+                        <option>Cash</option>
+                        <option>Credit/Debit Card</option>
+                        <option>UPI (PhonePe, GPay)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Payment Duration (in days):</label></td>
+                <td><input type="number" name="paymentDuration"></td>
+            </tr>
+            <tr>
+                <td><label>Receiver:</label></td>
+                <td><input type="text" name="receiver"></td>
+            </tr>
+            <tr>
+                <td><label>Remarks:</label></td>
+                <td><input type="text" name="remarks"></td>
+            </tr>
+        </table>
+        <div class="form-buttons">
+            <button type="submit" id="submit">Submit</button>
+            <button type="button" id="clear" onclick="clearForm()">Clear</button>
+        </div>
+    </form>
+
+    <script>
+        function clearForm() {
+            const form = document.querySelector('form');
+            form.reset();
+        }
+
+    </script>
+</body>
+</html>
